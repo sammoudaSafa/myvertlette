@@ -1,0 +1,22 @@
+.site {
+    margin: auto;
+    width: 95vw;
+    position: relative;
+
+    &-header {
+        width: 100%;
+        margin: {
+            top: $spacing__large;
+            bottom: $spacing__huge;
+        }
+    }
+
+    &-main {
+        width: 100%;
+    }
+
+    &-footer {
+        margin-top: $spacing__huge;
+        width: 100%;
+    }
+}

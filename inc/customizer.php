@@ -1,8 +1,8 @@
 <?php
 /**
- * vertlette Theme Customizer
+ * Vertlette Theme Customizer
  *
- * @package vertlette
+ * @package Vertlette
  */
 
 /**

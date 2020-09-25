@@ -1,0 +1,29 @@
+.main-navigation {
+    position: absolute;
+    left: 0;
+    top: $spacing__header;
+    .menu-menu-principal-container {
+        .menu {
+            &-item {
+                display: inline-block;
+                margin-right: $spacing__small;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: $spacing__header;
+    .widget {
+        display: inline-block;
+        margin-right: $spacing__small;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+a {
+	color: $color__primary;
+	&:hover {
+		color: $color__medium;
+	}
+}
+
+header {
+	a {
+		text-decoration: none;
+		font-family: $font__serif;
+	}
+}

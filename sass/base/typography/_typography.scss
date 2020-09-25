@@ -1,0 +1,15 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	letter-spacing: $kerning__body;
+	color: $color__dark;
+	font-family: $font__sans;
+	font-size: $size__body;
+	line-height: $leading__base;
+}
+
+@import "headings";
+@import "copy";

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package vertlette
+ * @package Vertlette
  */
 
 if ( ! function_exists( 'vertlette_posted_on' ) ) :

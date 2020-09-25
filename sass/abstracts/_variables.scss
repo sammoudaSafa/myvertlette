@@ -1,0 +1,55 @@
+// Modular scale
+$scale__base: 16px;
+$scale__ratio: 1.333;
+
+// Font sizes
+$size__body: $scale__base;
+$size__tiny: $scale__base/$scale__ratio;
+$size__h4: $scale__base * $scale__ratio;
+$size__h3: $size__h4 * $scale__ratio;
+$size__h2: $size__h3 * $scale__ratio;
+$size__h1: $size__h2 * $scale__ratio;
+
+// Other
+$leading__base: 1.2;
+$kerning__title: -1px;
+$kerning__body: 1px;
+
+// Font families
+$font__serif: 'Libre Caslon Text', serif;
+$font__sans: 'Roboto', sans-serif; 
+
+// Colors
+$color__primary: #9D765A;
+$color__dark: #3F3E3D;
+$color__medium: #A7A5A1;
+$color__light: #F3F2F0;
+
+// Spacing
+$spacing__base: $scale__base;
+$spacing__padding: 5px;
+$spacing__padding-sides: $scale__base/$scale__ratio;
+$spacing__small: $scale__base * $scale__ratio;
+$spacing__medium: $spacing__small * $scale__ratio;
+$spacing__large: $spacing__medium * $scale__ratio;
+$spacing__huge: $spacing__large * $scale__ratio;
+$spacing__header: $spacing__huge * 2;
+
+// Columns
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8%;
+
+// Structure
+$size__site-main: 100%;
+$size__site-sidebar: 25%;

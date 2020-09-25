@@ -1,10 +1,10 @@
 <?php
 /**
- * vertlette functions and definitions
+ * Vertlette functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package vertlette
+ * @package Vertlette
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -24,7 +24,7 @@ if ( ! function_exists( 'vertlette_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on vertlette, use a find and replace
+		 * If you're building a theme based on Vertlette, use a find and replace
 		 * to change 'vertlette' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'vertlette', get_template_directory() . '/languages' );
@@ -124,9 +124,31 @@ add_action( 'after_setup_theme', 'vertlette_content_width', 0 );
 function vertlette_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'vertlette' ),
+			'name'          => esc_html__( 'right', 'vertlette' ),
 			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Menu incluant: Barre de recherche, panier et compte.', 'vertlette' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'social', 'vertlette' ),
+			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add widgets here.', 'vertlette' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'categories', 'vertlette' ),
+			'id'            => 'sidebar-3',
+			'description'   => esc_html__( 'Liste des catégories de produits', 'vertlette' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -178,3 +200,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
