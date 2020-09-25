@@ -1,0 +1,29 @@
+.card-annonce{
+    @extend .card;
+
+    &--big-title{
+        font-size: $card-bigger-title;
+        text-align: center;
+        padding: $base-padding;
+        font-weight: $semibold;
+    }
+    &--second-title{
+        text-align: center;
+        font-size: $card-semi-big-tittle;
+        font-weight: $semibold;
+        text-transform: uppercase;
+    }
+    &--date{
+        text-align: center;
+        font-size: $card-bigger-title;
+        padding-top: $base-padding;
+        font-weight: bold;
+    }
+    
+}
+@media (max-width: 999px) {
+    .card {
+        padding-top:25%;
+    }
+
+}

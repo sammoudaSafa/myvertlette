@@ -1,0 +1,17 @@
+.card-doc{
+@extend .card;
+
+    &--big-title{
+        font-size:$card-bigger-title;
+        text-align: center;
+        padding: $base-padding;
+        font-weight: bold;
+    }
+    
+}
+@media (max-width: 999px) {
+    .card {
+        padding-top:25%;
+    }
+
+}

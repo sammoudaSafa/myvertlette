@@ -1,0 +1,31 @@
+.banner{
+    @extend .card;
+
+    position: relative;
+   
+    &--big-title{
+        padding: $base-padding;
+        font-size: $h2;
+        font-weight: 600;
+        position: absolute;
+        left: 15px;
+        bottom: 25px;
+        
+    }
+    &--second-title{
+        font-size: $h3;
+        margin-left: 30px; 
+        margin-bottom: 20px; 
+        font-weight: 500;
+        position: absolute;
+        left: 30px;
+        bottom: 15px;
+    }
+    
+}
+@media (max-width: 999px) {
+    .banner {
+        padding-top:10%;
+    }
+
+}

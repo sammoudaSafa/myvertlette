@@ -1,44 +1,70 @@
-<h1 align="center">
-  <img src="https://storefront.files.wordpress.com/2017/02/storefront1.png?w=100&h=100&crop=1" alt="Storefront">
-</h1>
+[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-<p align="center">
-  <a href="https://packagist.org/packages/woocommerce/woocommerce"><img src="https://poser.pugx.org/woocommerce/woocommerce/license" alt="license"></a> 
-  <a href="https://woocommerce.com/"><img src="http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg" alt="Designed for WooCommerce"></a>
-  <img src="https://img.shields.io/wordpress/theme/dt/storefront.svg" alt="WordPress.org downloads">
-  <img src="https://img.shields.io/wordpress/theme/r/storefront.svg" alt="WordPress.org rating">
-  <a href="https://scrutinizer-ci.com/g/woothemes/storefront/build-status/master"><img src="https://scrutinizer-ci.com/g/woothemes/storefront/badges/build.png?b=master" alt="Build Status"></a>
-</p>
+_s
+===
 
-*Storefront* is a robust and flexible [WordPress](https://wordpress.org) theme, designed and built by the team at [WooCommerce](https://woocommerce.com/) to help you make the most out of using the [WooCommerce](https://woocommerce.com) plugin to power your online store. It's available to download for free from the WordPress [theme repository](https://wordpress.org/themes/storefront/).
+Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-It features deep integration with WooCommerce core plus several of the most popular extensions:
+My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
-* [WooCommerce Bookings](https://woocommerce.com/products/woocommerce-bookings/)
-* [WooCommerce Wishlists](https://woocommerce.com/products/woocommerce-wishlists/)
-* [WooCommerce Brands](https://woocommerce.com/products/brands/)
-* [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)
+* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
+* A just right amount of lean, well-commented, modern, HTML5 templates.
+* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
+* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
+* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
+* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
+* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
+Note: `.no-sidebar` styles are automatically loaded.
+* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
+* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
+* Licensed under GPLv2 or later. :) Use it to make something cool.
 
-For developers, Storefront is the perfect starting point for your project. It's lean and extensible codebase will allow you to easily add functionality to your site via child theme and/or custom plugin(s).
+Installation
+---------------
 
-## Storefront extensions
-Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](https://woocommerce.com/product-category/storefront-extensions/).
+### Requirements
 
-## Storefront Documentation
-You can view detailed Storefront documentation on the [WooCommerce documentation website](https://docs.woocommerce.com/documentation/themes/storefront/).
+`_s` requires the following dependencies:
 
-## Storefront in your language
-Storefront translations can be downloaded from [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront). To use one of these translations it is recommended that you upload it to `wp-content/languages/themes/storefront-pt_BR.mo`. Adding it to this location means the file will not be lost when you update Storefront. It is however possible to add a translation to the `languages` folder in your child theme if you'd prefer.
+- [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
 
-## Storefront help & support
-WooCommerce customers can get support at the [WooCommerce support portal](https://woocommerce.com/contact-us/). Otherwise, you can try posting on the [WordPress support forums](https://wordpress.org/support/theme/storefront/). Please remember, GitHub is for bug reports and contributions, _not_ support.
+### Quick Start
 
-## Contributing to Storefront
-If you have a patch, or you've stumbled upon an issue with Storefront core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woocommerce/storefront/blob/master/CONTRIBUTING.md) for more information about how you can do this.
+Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
-If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woocommerce.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there.
+1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
+2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
+3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
+4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
+5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
+6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
-You can keep up with the latest Storefront developments on the [dev blog](https://woocommerce.wordpress.com/category/storefront/).
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-## Testing Storefront
-Want to help test upcoming Storefront releases? Check out the [Storefront Beta Tester](https://github.com/seb86/Storefront-Beta-Tester) plugin.
+### Setup
+
+To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+
+```sh
+$ composer install
+$ npm install
+```
+
+### Available CLI commands
+
+`_s` comes packed with CLI commands tailored for WordPress theme development :
+
+- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
+- `composer lint:php` : checks all PHP files for syntax errors.
+- `composer make-pot` : generates a .pot file in the `languages/` directory.
+- `npm run compile:css` : compiles SASS files to css.
+- `npm run compile:rtl` : generates an RTL stylesheet.
+- `npm run watch` : watches all SASS files and recompiles them to css when they change.
+- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
+- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
+- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+
+Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+
+Good luck!

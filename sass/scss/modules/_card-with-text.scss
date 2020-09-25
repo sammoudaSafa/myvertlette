@@ -1,0 +1,27 @@
+.card-with-text {
+    @extend .card;
+    &--title{
+        font-size: $card-desc;
+        padding: $base-padding;
+        font-weight: 500;
+    }
+    &--main{
+        padding: 0px 20px 0px 20px;
+        font-size: $base-size;
+        font-weight: normal;
+    }
+    &--signature{
+        text-align: end;
+        font-size: $base-little-size;
+        font-weight: bold;
+        padding: $base-padding;
+
+    }
+    
+}
+@media (max-width: 999px) {
+    .card {
+        padding-top:25%;
+    }
+
+}
